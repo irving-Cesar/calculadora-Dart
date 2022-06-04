@@ -20,17 +20,17 @@ class Calculadora extends Operacao{
   Calculadora(this.num1, this.num2, this.op);
 
   calcular() {
-    if (op == "a") {
-      print(adicao(this.num1, this.num2));
+    if (this.op == "a") {
+      adicao(this.num1, this.num2);
 
-    } else if (op == "d") {
-      print(divisao(this.num1, this.num2));
+    } else if (this.op == "d") {
+      divisao(this.num1, this.num2);
 
-    }else if (op == "m") {
-      print(multiplicacao(this.num1, this.num2));
+    }else if (this.op == "m") {
+      multiplicacao(this.num1, this.num2);
 
-    }else if (op == "s") {
-      print(subtracao(this.num1, this.num2));
+    }else if (this.op == "s") {
+      subtracao(this.num1, this.num2);
 
     } else {
       print("Não existe essa operação!");
@@ -42,15 +42,24 @@ class Calculadora extends Operacao{
 void main() {
   
   print('Insira o primeiro número: ');
-  double num1 = double.parse(stdin.readLineSync()!);
+  String? n1 = stdin.readLineSync()!;
 
-  print('Insira agora o segundo número:');
-  double num2 = double.parse(stdin.readLineSync()!);
+  print('Insira o segundo número:');
+  String? n2 = stdin.readLineSync()!;
 
-  print('Qual a operação você deseja realizar?\nA - Adição\nD - Divisão\nM - Multiplicação\nS - Subtração');
-  String? op = stdin.readLineSync()!;
-  op = op.toLowerCase();
-  
-  Calculadora calculadora = new Calculadora(num1, num2, op);
-  calculadora.calcular();
+  if (int.parse(n1).isNaN && int.parse(n2).isNaN) {
+    print('Por favor, insira apenas números!');
+
+  } else {
+    double num1 = double.parse(n1);
+    double num2 = double.parse(n2);
+
+    print('Qual a operação você deseja realizar?\nA - Adição\nD - Divisão\nM - Multiplicação\nS - Subtração');
+    String? op = stdin.readLineSync()!;
+    op = op.toLowerCase();
+    
+    Calculadora calculadora = new Calculadora(num1, num2, op);
+    print('Resultado = ${calculadora.calcular()}.');
+  }
+
 }
