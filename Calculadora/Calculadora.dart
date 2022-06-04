@@ -21,16 +21,16 @@ class Calculadora extends Operacao{
 
   calcular() {
     if (op == "a") {
-      adicao(this.num1, this.num2);
+      print(adicao(this.num1, this.num2));
 
     } else if (op == "d") {
-      divisao(this.num1, this.num2);
+      print(divisao(this.num1, this.num2));
 
     }else if (op == "m") {
-      multiplicacao(this.num1, this.num2);
+      print(multiplicacao(this.num1, this.num2));
 
     }else if (op == "s") {
-      subtracao(this.num1, this.num2);
+      print(subtracao(this.num1, this.num2));
 
     } else {
       print("Não existe essa operação!");
