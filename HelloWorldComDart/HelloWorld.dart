@@ -1,4 +1,4 @@
-class HellorWorld {
+class HelloWorld {
   late String mensagem;
 
   Saudacao(){
@@ -7,7 +7,7 @@ class HellorWorld {
 }
 
 main() {
-  var hello = HellorWorld();
+  var hello = HelloWorld();
   hello.mensagem  = "Hello, world!";
   hello.Saudacao();
 }
