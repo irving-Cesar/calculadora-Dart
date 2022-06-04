@@ -1,6 +1,7 @@
+import 'dart:io';
+
 class Calculadora {
-  double num1 = 0;
-  double num2 = 0;
+  Calculadora(double num1, double num2);
 
   // String op =
 
@@ -19,6 +20,11 @@ class Operacao {
 }
 
 void main() {
-  Calculadora calculadora = new Calculadora();
+  print('Insira o primeiro número: ');
+  double num1 = double.parse(stdin.readLineSync()!);
+  print('Insira agora o segundo número:');
+  double num2 = double.parse(stdin.readLineSync()!);
+
+  Calculadora calculadora = new Calculadora(num1, num2);
   calculadora;
 }
