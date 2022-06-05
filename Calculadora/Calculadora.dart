@@ -6,7 +6,14 @@ class Operacao {
 
   adicao(n1, n2) { return result = n1 + n2; }  
 
-  divisao(n1, n2) { return result = n1 / n2; }  
+  divisao(n1, n2) {
+    if (n2 != 0) {
+       return result = n1 / n2;
+    } else {
+      print('Não é possível dividir por ZERO!');
+      return "inexistente";
+    }
+  }  
 
   multiplicacao(n1, n2) { return result = n1 * n2; }
 
@@ -70,7 +77,7 @@ void main() {
       op = op.toLowerCase();
       
       Calculadora calculadora = new Calculadora(num1, num2, op);
-      print('Resultado = ${calculadora.calcular()}.');
+      print('Resultado = ${calculadora.calcular()}');
     }
 
   } catch (e){
