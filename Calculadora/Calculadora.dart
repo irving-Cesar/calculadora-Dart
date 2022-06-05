@@ -56,7 +56,7 @@ void main() {
   print('Insira o segundo número:');
   String n2 = stdin.readLineSync()!;
 
-
+  // verificando se é número
   numCheck(numero) {
     var check = double.parse(numero).toDouble();
 
