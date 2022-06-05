@@ -9,23 +9,21 @@ class Calculadora {
 
   Calculadora(this.num1, this.num2, this.op);
 
-  double result = 0; 
-  
   // Operações
-  adicao(n1, n2){ return result = n1 + n2; }
+  adicao(n1, n2){ return n1 + n2; }
 
   divisao(n1, n2) {
     if (n2 != 0) {
-       return result = n1 / n2;
+       return n1 / n2;
     } else {
       print('Não é possível dividir por ZERO!');
       return "inexistente";
     }
   }  
 
-  multiplicacao(n1, n2) { return result = n1 * n2; }
+  multiplicacao(n1, n2) { return n1 * n2; }
 
-  subtracao(n1, n2) { return result = n1 - n2; } 
+  subtracao(n1, n2) { return n1 - n2; } 
 
   // Passando valores
   calcular() {
