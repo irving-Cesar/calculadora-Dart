@@ -2,6 +2,7 @@
 
 import 'dart:io';
 
+
 class Calculadora {
   double num1;
   double num2;
@@ -34,10 +35,10 @@ class Calculadora {
     } else if (this.op == "d") {
       return divisao(this.num1, this.num2);
 
-    }else if (this.op == "m") {
+    } else if (this.op == "m") {
       return multiplicacao(this.num1, this.num2);
 
-    }else if (this.op == "s") {
+    } else if (this.op == "s") {
       return subtracao(this.num1, this.num2);
       
     } else {
@@ -54,6 +55,7 @@ void main() {
 
   print('Insira o segundo número:');
   String n2 = stdin.readLineSync()!;
+
 
   numCheck(numero) {
     var check = double.parse(numero).toDouble();
