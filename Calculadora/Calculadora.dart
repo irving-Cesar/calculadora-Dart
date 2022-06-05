@@ -1,14 +1,16 @@
 import 'dart:io';
 
+
 class Operacao {
-  
-  adicao(n1, n2) { print(n1 + n2); }  
+  double result = 0;
 
-  divisao(n1, n2) { print(n1 / n2); }  
+  adicao(n1, n2) { return result = n1 + n2; }  
 
-  multiplicacao(n1, n2) { print(n1 * n2); }
+  divisao(n1, n2) { return result = n1 / n2; }  
 
-  subtracao(n1, n2) { print(n1 - n2); } 
+  multiplicacao(n1, n2) { return result = n1 * n2; }
+
+  subtracao(n1, n2) { return result = n1 - n2; } 
 
 }
 
@@ -20,18 +22,19 @@ class Calculadora extends Operacao{
   Calculadora(this.num1, this.num2, this.op);
 
   calcular() {
+    
     if (this.op == "a") {
-      adicao(this.num1, this.num2);
+      return adicao(this.num1, this.num2);
 
     } else if (this.op == "d") {
-      divisao(this.num1, this.num2);
+      return divisao(this.num1, this.num2);
 
     }else if (this.op == "m") {
-      multiplicacao(this.num1, this.num2);
+      return multiplicacao(this.num1, this.num2);
 
     }else if (this.op == "s") {
-      subtracao(this.num1, this.num2);
-
+      return subtracao(this.num1, this.num2);
+      
     } else {
       print("Não existe essa operação!");
     }
@@ -40,12 +43,12 @@ class Calculadora extends Operacao{
 }
 
 void main() {
-  
+
   print('Insira o primeiro número: ');
-  String? n1 = stdin.readLineSync()!;
+  String n1 = stdin.readLineSync()!;
 
   print('Insira o segundo número:');
-  String? n2 = stdin.readLineSync()!;
+  String n2 = stdin.readLineSync()!;
 
   numCheck(numero) {
     var check = double.parse(numero).toDouble();
