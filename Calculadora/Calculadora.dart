@@ -66,7 +66,7 @@ void main() {
   }
   
   try {
-    if (numCheck(n1) && numCheck(n2)) {
+    if (numCheck(n1) || numCheck(n2)) {
       double num1 = double.parse(n1);
       double num2 = double.parse(n2);
 
