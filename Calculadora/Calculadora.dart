@@ -2,11 +2,17 @@
 
 import 'dart:io';
 
+class Calculadora {
+  double num1;
+  double num2;
+  String op;
 
-class Operacao {
-  double result = 0;
+  Calculadora(this.num1, this.num2, this.op);
 
-  adicao(n1, n2) { return result = n1 + n2; }  
+  double result = 0; 
+  
+  // Operações
+  adicao(n1, n2){ return result = n1 + n2; }
 
   divisao(n1, n2) {
     if (n2 != 0) {
@@ -21,15 +27,7 @@ class Operacao {
 
   subtracao(n1, n2) { return result = n1 - n2; } 
 
-}
-
-class Calculadora extends Operacao{
-  double num1;
-  double num2;
-  String op;
-
-  Calculadora(this.num1, this.num2, this.op);
-
+  // Passando valores
   calcular() {
     
     if (this.op == "a") {
